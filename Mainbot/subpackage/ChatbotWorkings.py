@@ -45,9 +45,9 @@ class AbortGreet(Greet):
 						return random.choice(self.RESPONSE)
 					else:
 						return Greet.greeting(self)
-                except:
+                                 except:
 					print("MemoryError")
-		except:
-			print("Bot insist for retry")		
+	except:
+		print("Bot insist for retry")		
 				
 
