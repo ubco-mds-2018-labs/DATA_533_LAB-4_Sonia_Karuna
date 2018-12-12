@@ -1,0 +1,17 @@
+language: python
+python:
+  - "3.4"
+  - "3.5"
+# command to run tests
+install:
+  - pip install pandas
+  - pip install random
+  - pip install logging
+  - pip install re
+  - pip install slackclient
+script:
+  - python parse_usermsg.py
+  - python test_handler.py
+  - python testing_bot_questions.py
+  - python testing_ChatbotWorkings.py
+ 

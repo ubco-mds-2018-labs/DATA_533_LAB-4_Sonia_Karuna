@@ -22,10 +22,12 @@ class Greet:
 
     def greeting(self):
         """If any of the words in the user's input was a greeting, return a greeting response"""
-        for word in self.sentence:
-            if word.lower() in self.GREET_KEYWORD:
-                return random.choice(self.GREET_RESPONSE)
-        
+        try:
+			for word in self.sentence:
+				if word.lower() in self.GREET_KEYWORD:
+					return random.choice(self.GREET_RESPONSE)
+        except:
+			print("Retry")
 
 
 class AbortGreet(Greet):
@@ -36,10 +38,16 @@ class AbortGreet(Greet):
            
     def greeting(self):
         """If any of the words in the user's input was not a greeting, return a abort greeting response"""
-        for word in self.sentence:
-            if word.lower() not in self.KEYWORD:
-                return random.choice(self.RESPONSE)
-            else:
-                return Greet.greeting(self)
-                
+        try:
+			for word in self.sentence:
+				try:
+					if word.lower() not in self.KEYWORD:
+						return random.choice(self.RESPONSE)
+					else:
+						return Greet.greeting(self)
+                except:
+					print("MemoryError")
+		except:
+			print("Bot insist for retry")		
+				
 
