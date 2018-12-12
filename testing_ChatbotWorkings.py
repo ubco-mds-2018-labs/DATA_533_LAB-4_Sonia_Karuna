@@ -6,8 +6,7 @@
 
 import ChatbotWorkings as cw
 import sys
-import unittest
- 
+
 class TestMyBot(unittest.TestCase):   
     
     @classmethod
