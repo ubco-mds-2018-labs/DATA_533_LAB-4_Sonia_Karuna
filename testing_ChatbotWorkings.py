@@ -6,6 +6,7 @@
 
 import Mainbot.subpackage.ChatbotWorkings as cw
 import sys
+import unittest
 
 class TestMyBot(unittest.TestCase):   
     
