@@ -27,7 +27,7 @@ class Greet:
 				if word.lower() in self.GREET_KEYWORD:
 					return random.choice(self.GREET_RESPONSE)
         except:
-			print("Retry")
+		print("Retry")
 
 
 class AbortGreet(Greet):
