@@ -4,7 +4,7 @@
 # In[8]:
 
 
-import bot_questions as bt
+import Mainbot.subpackage.bot_questions as bt
 import sys
 
  
