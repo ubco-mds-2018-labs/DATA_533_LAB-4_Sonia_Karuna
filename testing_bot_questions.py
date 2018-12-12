@@ -6,6 +6,7 @@
 
 import Mainbot.subpackage.bot_questions as bt
 import sys
+import unittest
 
  
 class TestBot(unittest.TestCase):   
