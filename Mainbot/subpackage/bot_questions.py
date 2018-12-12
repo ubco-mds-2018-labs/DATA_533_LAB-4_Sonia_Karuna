@@ -26,4 +26,6 @@ def questions(command):
 			return ans
 		else:
 			return ans[0]
+	except:
+		print("Error")
 
