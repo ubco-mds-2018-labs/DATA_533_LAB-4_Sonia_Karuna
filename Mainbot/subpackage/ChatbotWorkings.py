@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[40]:
+# In[6]:
 
 
 
@@ -28,8 +28,6 @@ class Greet:
                     return random.choice(self.GREET_RESPONSE)
         except:
             print("Retry")
-
-
 class AbortGreet(Greet):
     def __init__(self, sentence):
         Greet.__init__(self, sentence)
@@ -48,4 +46,5 @@ class AbortGreet(Greet):
                 except:
                         print("MemoryError")
         except:
-            print("Bot insist for retry")	
+            print("Bot insist for retry")
+
