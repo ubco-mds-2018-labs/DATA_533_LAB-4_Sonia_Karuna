@@ -5,6 +5,7 @@
 
 
 
+
 ##from __future__ import print_function, unicode_literals
 import random
 
@@ -22,11 +23,11 @@ class Greet:
     def greeting(self):
         """If any of the words in the user's input was a greeting, return a greeting response"""
         try:
-			for word in self.sentence:
-				if word.lower() in self.GREET_KEYWORD:
-					return random.choice(self.GREET_RESPONSE)
+            for word in self.sentence:
+                if word.lower() in self.GREET_KEYWORD:
+                    return random.choice(self.GREET_RESPONSE)
         except:
-		print("Retry")
+            print("Retry")
 
 
 class AbortGreet(Greet):
@@ -38,15 +39,13 @@ class AbortGreet(Greet):
     def greeting(self):
         """If any of the words in the user's input was not a greeting, return a abort greeting response"""
         try:
-			for word in self.sentence:
-				try:
-					if word.lower() not in self.KEYWORD:
-						return random.choice(self.RESPONSE)
-					else:
-						return Greet.greeting(self)
-                                 except:
-					print("MemoryError")
-	except:
-		print("Bot insist for retry")		
-				
-
+            for word in self.sentence:
+                try:
+                    if word.lower() not in self.KEYWORD:
+                        return random.choice(self.RESPONSE)
+                    else:
+                        return Greet.greeting(self)
+                except:
+                        print("MemoryError")
+        except:
+            print("Bot insist for retry")	
