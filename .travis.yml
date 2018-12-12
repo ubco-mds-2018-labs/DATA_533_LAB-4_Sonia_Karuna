@@ -5,7 +5,7 @@ python:
 # command to run tests
 install:
   - pip install pandas
-  - pip install re
+  - pip install regex
   - pip install slackclient
 script:
   - python parse_usermsg.py
