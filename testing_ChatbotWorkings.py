@@ -4,7 +4,7 @@
 # In[10]:
 
 
-import ChatbotWorkings as cw
+import Mainbot.subpackage.ChatbotWorkings as cw
 import sys
 
 class TestMyBot(unittest.TestCase):   
