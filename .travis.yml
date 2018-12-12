@@ -12,4 +12,7 @@ script:
   - python test_handler.py
   - python testing_bot_questions.py
   - python testing_ChatbotWorkings.py
+after_script:
+  - ./ parse_usermsg after-build --exit-code $TRAVIS_TEST_RESULT
+ 
  
