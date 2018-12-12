@@ -4,8 +4,6 @@
 # In[36]:
 
 
-import pandas as pd
-
 def questions(command):
 
     rdata = {
@@ -21,11 +19,10 @@ def questions(command):
     robo_data = pd.DataFrame(rdata, columns=['Questions', 'Answers'])
  
     ans=robo_data[robo_data.Questions == command]['Answers'].tolist()
-	try:
-		if ans==[]:
-			return ans
-		else:
-			return ans[0]
-	except:
-		print("Error")
-
+    try:
+        if ans==[]:
+            return ans
+        else:
+            return ans[0]
+    except:
+        print("Error")
