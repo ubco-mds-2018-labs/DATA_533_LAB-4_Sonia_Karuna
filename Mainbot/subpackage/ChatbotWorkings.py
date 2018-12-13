@@ -5,7 +5,6 @@
 
 
 import random
-
 # Sentences we'll respond with if the user greeted us
 class Greet:
     def __init__(self, sentence):
@@ -22,8 +21,8 @@ class Greet:
                 if word.lower() in self.GREET_KEYWORD:
                     return random.choice(self.GREET_RESPONSE)
         except:
-            print("Retry")
-
+            msg="Please pass alist of greeting"
+            return msg
 
 class AbortGreet(Greet):
     def __init__(self, sentence):
@@ -35,15 +34,14 @@ class AbortGreet(Greet):
         """If any of the words in the user's input was not a greeting, return a abort greeting response"""
         try:
             for word in self.sentence:
-                try:
-                    if word.lower() not in self.KEYWORD:
-                        return random.choice(self.RESPONSE)
-                    else:
-                        return Greet.greeting(self)
-                except:
-                    print("MemoryError")
+                if word.lower() not in self.KEYWORD:
+                    return random.choice(self.RESPONSE)
+                else:
+                    return Greet.greeting(self)
+
         except:
-            print("Bot insist for retry")
+            msg="Bot insist for retry"
+            return msg
 
             
 
